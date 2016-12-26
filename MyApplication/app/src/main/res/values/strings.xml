@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MapAppStart</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAf1wc-L4_XHjNMayjuL8DFBD9ezbhEs0w</string>
+</resources>
