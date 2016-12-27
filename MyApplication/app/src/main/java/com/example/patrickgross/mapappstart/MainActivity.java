@@ -12,7 +12,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 
-public class MainActivity extends FragmentActivity implements OnMapReadyCallback{
+public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
 
     //Map variables
     private static boolean mapReady = false;
@@ -31,19 +31,25 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         //TODO Adding ClickListeners
         btnMap.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                m_Map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                if (mapReady) {
+                    m_Map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                }
             }
         });
 
         btnSatellite.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                m_Map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                if (mapReady) {
+                    m_Map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+                }
             }
         });
 
         btnHybrid.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                m_Map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+                if (mapReady) {
+                    m_Map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+                }
             }
         });
 
